@@ -1,4 +1,4 @@
-from typing import Generic, TypeVar
+from typing import Generic
 from abc import ABC, abstractmethod
 
 from value_objects.generic import BaseEntity
@@ -10,7 +10,7 @@ class ICurdRepository(ABC, Generic[BaseEntity]):
         raise NotImplementedError
 
     @abstractmethod
-    def get_by_id(self, id: int) -> BaseEntity:
+    def get_by_id(self, id: str) -> BaseEntity:
         raise NotImplementedError
 
     @abstractmethod
