@@ -6,7 +6,7 @@ from contextlib import asynccontextmanager
 from app.schemas import UserCreate, UserUpdate
 from entities.user import User
 from use_cases.user_crud_service import UserCrudService
-from infrastructure.in_memory_repository import InMemoryReposity
+from ddd.infrastructure.user_memory_repository import InMemoryReposity
 
 
 def get_user_crud_service(request: Request) -> UserCrudService:
